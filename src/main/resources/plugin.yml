@@ -1,0 +1,5 @@
+name: AkinaoGame
+version: '${project.version}'
+main: fr.robotv2.akinaogame.AkinaoGame
+api-version: 1.15
+authors: [ Robotv2 ]
