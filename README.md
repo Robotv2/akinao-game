@@ -11,4 +11,5 @@ akinao-game est le système de base pour les mini-jeux chez akinao. Il s'occupe 
 		<groupId>com.github.akinao-development</groupId>
 		<artifactId>akinao-game</artifactId>
 		<version>-SNAPSHOT</version>
+		<scope>provided</scope>
 	</dependency>
