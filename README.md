@@ -2,12 +2,10 @@
 
 akinao-game est le système de base pour les mini-jeux chez akinao. Il s'occupe automatiquement de l'arrivé des joueurs et de leurs dispatchements sur le lobby à la fin de la partie.
 
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
   
   	<dependency>
 	    <groupId>com.github.akinao-development</groupId>
