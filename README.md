@@ -8,7 +8,7 @@ akinao-game est le système de base pour les mini-jeux chez akinao. Il s'occupe 
 	</repository>
   
   	<dependency>
-	    <groupId>com.github.akinao-development</groupId>
-	    <artifactId>akinao-game</artifactId>
-	    <version>-SNAPSHOT</version>
+		<groupId>com.github.akinao-development</groupId>
+		<artifactId>akinao-game</artifactId>
+		<version>-SNAPSHOT</version>
 	</dependency>
