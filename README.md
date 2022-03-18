@@ -1,0 +1,1 @@
+akinao-game
