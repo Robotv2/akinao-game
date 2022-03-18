@@ -22,8 +22,6 @@ public final class AkinaoGame extends JavaPlugin {
     private CountManager countManager;
     private TimerManager timerManager;
 
-    public int debug;
-
     @Override
     public void onEnable() {
 

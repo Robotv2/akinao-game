@@ -29,18 +29,4 @@ public class GameCommand extends BaseCommand {
         game.getCountManager().setMaxCount(max);
         StringUtil.sendMessage(sender, "&aNombre maximum de joueur connecté pour la partie: " + max);
     }
-
-    @Subcommand("debug add")
-    public void onDebugAdd(CommandSender sender) {
-        game.debug++;
-        game.getTimerManager().handleJoin();
-        StringUtil.sendMessage(sender, "&7Nouvelle valeur de debug: &e" + game.debug);
-    }
-
-    @Subcommand("debug remove")
-    public void onDebugRemove(CommandSender sender) {
-        game.debug--;
-        game.getTimerManager().handleQuit();
-        StringUtil.sendMessage(sender, "&7Nouvelle valeur de debug: &e" + game.debug);
-    }
 }
