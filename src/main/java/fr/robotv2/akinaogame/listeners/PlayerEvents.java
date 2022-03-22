@@ -9,6 +9,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 
 public class PlayerEvents implements Listener {
 
@@ -32,6 +33,13 @@ public class PlayerEvents implements Listener {
     }
 
     @EventHandler
+    public void onHunger(FoodLevelChangeEvent event) {
+        if(game.getGameStateManager().getCurrent() != GameState.PLAYING) {
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
     public void onPlace(BlockPlaceEvent event) {
         if(game.getGameStateManager().getCurrent() != GameState.PLAYING) {
             event.setCancelled(true);
@@ -47,6 +55,7 @@ public class PlayerEvents implements Listener {
 
     @EventHandler
     public void onSpawn(CreatureSpawnEvent event) {
-        event.setCancelled(true);
+        if(event.getSpawnReason() != CreatureSpawnEvent.SpawnReason.CUSTOM)
+            event.setCancelled(true);
     }
 }

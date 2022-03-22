@@ -31,7 +31,6 @@ public final class AkinaoGame extends JavaPlugin {
         this.loadListeners();
 
         for(World world : Bukkit.getWorlds()) {
-            world.setDifficulty(Difficulty.PEACEFUL);
             world.setStorm(false);
             world.setTime(1000);
             world.setGameRuleValue("doDaylightCycle", "false");

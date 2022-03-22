@@ -4,10 +4,7 @@ import fr.robotv2.akinaogame.AkinaoGame;
 import fr.robotv2.akinaogame.serializer.LocationSerializer;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class LobbyManager implements Listener {
@@ -33,16 +30,6 @@ public class LobbyManager implements Listener {
         String lobbyStr = LocationSerializer.toString(lobby);
         plugin.getConfig().set("lobby-location", lobbyStr);
         plugin.saveConfig();
-    }
-
-    @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        event.setJoinMessage(null);
-    }
-
-    @EventHandler
-    public void onLeft(PlayerQuitEvent event) {
-        event.setQuitMessage(null);
     }
 
     public void teleportToLobby(Player player) {

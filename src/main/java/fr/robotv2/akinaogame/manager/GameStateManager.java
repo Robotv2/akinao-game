@@ -19,7 +19,6 @@ public class GameStateManager {
     }
 
     public void setCurrent(GameState current) {
-        System.out.println(current);
         this.current = current;
         game.getServer().getPluginManager().callEvent(new GameStateChangeEvent(current));
     }
